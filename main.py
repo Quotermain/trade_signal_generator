@@ -1,5 +1,4 @@
 import pickle
-import yfinance as yf
 from utils.send_message import send_message
 from utils.check_time_condition import check_time_condition
 from utils.get_data import get_data
@@ -14,7 +13,8 @@ RUS_STOCKS = [
 
 while True:
 	
-	for ticker in DICT_OF_OPEN_MINUS_LOW_ABS_DAY:		
+	# ТОЛЬКО РОССИЙСКИЕ АКЦИИ!
+	for ticker in RUS_STOCKS:		
 		
 		# Checks whether the russian stock market is open
 		time_condition = check_time_condition()
