@@ -10,6 +10,9 @@ with open('data/dict_of_mean_ranges_per_5_min.pickle', 'rb') as file:
 RUS_STOCKS = [
 	ticker for ticker in DICT_OF_OPEN_MINUS_LOW_ABS_DAY if '.ME' in ticker
 ]
+CURRENCIES = [
+	ticker for ticker in DICT_OF_OPEN_MINUS_LOW_ABS_DAY if '=X' in ticker
+]
 
 while True:
 	
